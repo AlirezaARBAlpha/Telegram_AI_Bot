@@ -132,7 +132,7 @@ def main():
     app.run_webhook(
         listen="0.0.0.0",
         port=8080,
-        webhook_url="https://your-render-app-url.onrender.com"
+        webhook_url="https://telegram-ai-bot-xyal.onrender.com/"
     )
 
 
