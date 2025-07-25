@@ -136,11 +136,8 @@ def main():
 
     app.web_app.router.add_get("/ping", ping)
 
-    app.run_webhook(
-        listen="0.0.0.0",
-        port=8080,
-        webhook_url="https://telegram-ai-bot-xyal.onrender.com/"
-    )
+    app.run_polling()
+
 
 
 
