@@ -9,6 +9,7 @@ from telegram.ext import (
 from openai import AsyncOpenAI
 from telegram.error import BadRequest
 from model_utils import set_model, get_model, get_model_or_default, has_model
+from aiohttp import web
 
 load_dotenv()
 BOT_TOKEN = os.getenv("TOKEN")
@@ -129,11 +130,18 @@ def main():
     app.add_handler(CallbackQueryHandler(button_handler))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 
+    # ⬇️ افزودن مسیر /ping برای پاسخ به UptimeRobot
+    async def ping(request):
+        return web.Response(text="pong")
+
+    app.web_app.router.add_get("/ping", ping)
+
     app.run_webhook(
         listen="0.0.0.0",
         port=8080,
         webhook_url="https://telegram-ai-bot-xyal.onrender.com/"
     )
+
 
 
 if __name__ == "__main__":
