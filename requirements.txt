@@ -3,4 +3,5 @@ openai
 python-dotenv
 flask
 gunicorn
+aiohttp
 python-telegram-bot[webhooks]==20.3
