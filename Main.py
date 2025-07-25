@@ -134,8 +134,6 @@ def main():
     async def ping(request):
         return web.Response(text="pong")
 
-    app.web_app.router.add_get("/ping", ping)
-
     app.run_polling()
 
 
