@@ -23,7 +23,12 @@ client = AsyncOpenAI(api_key=OPENROUTER_API_KEY, base_url="https://openrouter.ai
 models = {
     "DeepSeek": "tngtech/deepseek-r1t2-chimera:free",
     "Moonshot": "moonshotai/kimi-k2:free",
-    "Qwen": "qwen/qwen3-235b-a22b-07-25:free"
+    "Qwen": "qwen/qwen3-235b-a22b-07-25:free",
+    "Meta Llama": "meta-llama/llama-3-70b-instruct",
+    "Google Gemma": "google/gemma-3n-e2b-it:free",
+    "Tencent": "tencent/hunyuan-a13b-instruct:free",
+    "Mistralai": "mistralai/mistral-small-3.2-24b-instruct:free",
+    "Microsoft": "microsoft/phi-3-medium-4k-instruct",
 }
 
 # 🧠 حافظه مکالمه کاربران
