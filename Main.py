@@ -125,11 +125,11 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return
 
     model_id = get_model_or_default(user_id)
-    thinking = await message.reply_text("🤖 در حال فکر کردن...")
+    # thinking = await message.reply_text("🤖 در حال فکر کردن...")
 
-    if context.job_queue:
-        context.job_queue.run_once(
-            lambda ctx: ctx.bot.delete_message(chat_id=thinking.chat_id, message_id=thinking.message_id), 10)
+    # if context.job_queue:
+    #     context.job_queue.run_once(
+    #         lambda ctx: ctx.bot.delete_message(chat_id=thinking.chat_id, message_id=thinking.message_id), 10)
 
     messages = [{"role": "system", "content": "تو یک دستیار فارسی‌زبان هستی."}] + user_histories[user_id][-10:]
     messages.append({"role": "user", "content": text})
