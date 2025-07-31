@@ -27,8 +27,8 @@ models = {
     "Moonshot": "moonshotai/kimi-k2:free",
     "Qwen": "qwen/qwen3-235b-a22b-07-25:free",
     "Meta Llama": "meta-llama/llama-3-70b-instruct",
-    "Google Gemma": "google/gemma-3n-e2b-it:free",
-    "Tencent": "tencent/hunyuan-a13b-instruct:free",
+    # "Google Gemma": "google/gemma-3n-e2b-it:free",
+    "DeepSeek Qwen": "deepseek/deepseek-r1-0528-qwen3-8b:free",
     "Mistralai": "mistralai/mistral-small-3.2-24b-instruct:free",
     "Microsoft": "microsoft/phi-3-medium-4k-instruct",
 }
