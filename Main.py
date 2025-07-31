@@ -14,7 +14,7 @@ from openai import AsyncOpenAI
 from telegram.error import BadRequest
 from model_utils import set_model, get_model, get_model_or_default, has_model
 from aiohttp import web
-from keep_alives import keep_alive
+from keep_alive import keep_alive
 
 keep_alive()
 load_dotenv()
